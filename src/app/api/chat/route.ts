@@ -159,7 +159,7 @@ export async function POST(req: NextRequest) {
           ...messages.slice(-20),
         ],
         temperature: 0.9,
-        max_tokens: 220,
+        max_tokens: 1024,
       }),
     })
 
