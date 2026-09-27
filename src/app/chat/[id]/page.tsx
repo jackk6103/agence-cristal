@@ -7,6 +7,7 @@ import { signatureCharacters } from '@/lib/characters'
 import { createClient } from '@/lib/supabase/client'
 
 type Message = { role: 'assistant' | 'user'; content: string }
+const storageKey = (id: string) => `agence-cristal:chat:${id}`
 type Character = {
   id: string
   name: string
@@ -40,6 +41,33 @@ export default function ChatPage() {
 
   const [text, setText] = useState('')
   const [loading, setLoading] = useState(false)
+  const [historyReady, setHistoryReady] = useState(false)
+
+  useEffect(() => {
+    if (!id) return
+
+    try {
+      const saved = window.localStorage.getItem(storageKey(id))
+      if (saved) {
+        const parsed = JSON.parse(saved) as Message[]
+        if (Array.isArray(parsed) && parsed.length > 0) setMessages(parsed)
+      }
+    } catch (error) {
+      console.error('Impossible de restaurer la conversation', error)
+    } finally {
+      setHistoryReady(true)
+    }
+  }, [id])
+
+  useEffect(() => {
+    if (!id || !historyReady || messages.length === 0) return
+
+    try {
+      window.localStorage.setItem(storageKey(id), JSON.stringify(messages))
+    } catch (error) {
+      console.error('Impossible de sauvegarder la conversation', error)
+    }
+  }, [id, historyReady, messages])
 
   useEffect(() => {
     if (signature) return
@@ -54,7 +82,7 @@ export default function ChatPage() {
       .then(({ data }) => {
         if (data) {
           setCharacter(data)
-          setMessages([
+          setMessages((current) => current.length > 0 ? current : [
             {
               role: 'assistant',
               content: `Je m'appelle ${data.name}. Tu m'as imaginée ainsi… maintenant apprenons à nous connaître.`,
