@@ -18,4 +18,4 @@
 .welcome-gift{display:flex;gap:14px;align-items:center;margin:12px 0 24px;padding:16px;border:1px solid rgba(236,213,161,.25);border-radius:18px;background:radial-gradient(circle at 0 0,#2b2117,#111 70%)}
 .welcome-gift>span{font-size:32px;color:var(--gold2)}
 .welcome-gift div{display:grid;gap:4px}.welcome-gift small{color:var(--muted)}
-@media(max-width:700px){.private-backdrop{padding:0}.private-card{width:100%;height:100dvh;max-height:none;border-radius:0;border:0;grid-template-columns:1fr;grid-template-rows:42dvh 1fr}.private-visual{min-height:0;border-radius:0}.private-copy{padding:26px 22px;justify-content:flex-start}.private-copy h2{font-size:40px}}
+@media(max-width:700px){.private-backdrop{padding:0;display:block;overflow-y:auto}.private-card{width:100%;height:auto;min-height:100dvh;max-height:none;overflow:visible;border-radius:0;border:0;grid-template-columns:1fr;grid-template-rows:auto auto}.private-visual{height:88dvh;min-height:620px;border-radius:0}.private-copy{min-height:58dvh;padding:30px 22px 42px;justify-content:flex-start}.private-copy h2{font-size:40px}}
