@@ -5,9 +5,11 @@ import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { signatureCharacters } from '@/lib/characters'
 import { createClient } from '@/lib/supabase/client'
+import CristalPrivateWelcome from '@/components/CristalPrivateWelcome'
 
 type Message = { role: 'assistant' | 'user'; content: string }
 const storageKey = (id: string) => `agence-cristal:chat:${id}`
+const adultTransition = /\b(sexe|sexuel|sexuelle|coucher|faire l['’]amour|intime|intimité|érotique|désir|excité|excitée|orgasme|nu|nue|lingerie)\b/i
 type Character = {
   id: string
   name: string
@@ -42,6 +44,7 @@ export default function ChatPage() {
   const [text, setText] = useState('')
   const [loading, setLoading] = useState(false)
   const [historyReady, setHistoryReady] = useState(false)
+  const [privateWelcomeOpen, setPrivateWelcomeOpen] = useState(false)
 
   useEffect(() => {
     if (!id) return
@@ -98,6 +101,12 @@ export default function ChatPage() {
     const clean = text.trim()
 
     if (!clean || !character || loading) return
+
+    const privateVerified = window.localStorage.getItem('ac_private_age_verified') === 'yes'
+    if (!privateVerified && adultTransition.test(clean)) {
+      setPrivateWelcomeOpen(true)
+      return
+    }
 
     const userMessage: Message = {
       role: 'user',
@@ -160,6 +169,12 @@ export default function ChatPage() {
 
   return (
     <main className="chat-page">
+      <CristalPrivateWelcome
+        open={privateWelcomeOpen}
+        characterName={character.name}
+        onVerified={() => undefined}
+        onClose={() => setPrivateWelcomeOpen(false)}
+      />
       <section className="chat-shell">
         <header className="chat-header">
           <Link href="/">←</Link>
