@@ -26,7 +26,7 @@ export default function CristalPrivateWelcome({ open, characterName, onClose, on
       <div className="private-card">
         <div className="private-visual">
           <Image
-            src="/characters/cristal-portrait-mobile.jpg"
+            src="/characters/cristal-pied-en-cap-mobile.jpg"
             alt="Cristal, maîtresse des lieux"
             fill
             sizes="(max-width: 620px) 100vw, 420px"
