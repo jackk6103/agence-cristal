@@ -8,7 +8,7 @@
 .private-backdrop{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.92);backdrop-filter:blur(16px);display:grid;place-items:center;padding:18px}
 .private-card{width:min(860px,100%);max-height:calc(100dvh - 36px);overflow:auto;display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);background:#0b0b0b;border:1px solid rgba(236,213,161,.3);border-radius:32px;box-shadow:0 40px 120px rgba(0,0,0,.7)}
 .private-visual{position:relative;min-height:560px;overflow:hidden;border-radius:31px 0 0 31px}
-.private-visual img{object-fit:cover;object-position:center top}
+.private-visual img{object-fit:contain;object-position:center center;background:#080808}
 .private-shade{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.82) 100%)}
 .private-signature{position:absolute;left:22px;right:22px;bottom:22px;font-size:10px;letter-spacing:.18em;color:var(--gold2);font-weight:900}
 .private-copy{padding:42px;display:flex;flex-direction:column;justify-content:center}
