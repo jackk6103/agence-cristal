@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { SignatureCharacter } from '@/lib/characters'
 
 export default function CharacterCard({ character }: { character: SignatureCharacter }) {
   return (
     <article className="character-card">
-      <Image src={character.image} alt={`${character.name}, personnage virtuel adulte`} fill unoptimized sizes="(max-width: 760px) 100vw, 33vw" />
+      <img src={character.image} alt={`${character.name}, personnage virtuel adulte`} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
       <div className="card-shade" />
       <div className="card-topline"><span>{character.age} ans</span><span>{character.traits[0]}</span></div>
       <div className="card-copy">
