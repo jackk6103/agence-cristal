@@ -17,7 +17,7 @@ export default function CristalContact() {
       {open && (
         <section role="dialog" aria-modal="false" aria-label="Contacter Cristal" style={{ width: 'min(338px, calc(100vw - 32px))', marginBottom: 12, borderRadius: 22, border: '1px solid rgba(236,213,161,.45)', background: '#12100e', boxShadow: '0 18px 60px rgba(0,0,0,.7)', overflow: 'hidden', color: '#f7f3ec' }}>
           <div style={{ display: 'flex', gap: 12, alignItems: 'center', padding: '16px 16px 8px' }}>
-            <img src="/characters/cristal-portrait-mobile.jpg" alt="Portrait de Cristal" width="64" height="74" style={{ width: 64, height: 74, borderRadius: 13, objectFit: 'cover', border: '1px solid #b99457' }} />
+            <img src="/characters/file_cristal_robe_champagne.png" alt="Portrait de Cristal" width="64" height="74" style={{ width: 64, height: 74, borderRadius: 13, objectFit: 'cover', border: '1px solid #b99457' }} />
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: 11, color: '#e5c88d', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Votre accueil personnel</div>
               <strong style={{ fontFamily: 'Georgia,serif', fontSize: 27, fontWeight: 500 }}>Cristal</strong>
