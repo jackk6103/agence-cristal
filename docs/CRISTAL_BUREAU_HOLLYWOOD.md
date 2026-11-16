@@ -75,3 +75,21 @@ Quelle que soit votre raison, soyez le bienvenu.
 ---
 
 **Important : ne pas substituer un nouveau scénario ou une nouvelle identité visuelle sans validation.**
+
+## Validation du nouveau portrait — 16 novembre 2026
+
+Le porteur du projet a **expressément validé** une nouvelle illustration de Cristal, générée dans la conversation du 16 novembre 2026 après avoir partagé plusieurs références de robes et de coiffures contemporaines.
+
+**Direction officielle du personnage, « Cristal 2026 » :**
+- Personnage féminin fictif, blonde, allure élégante et très contemporaine.
+- Coiffure moderne, relevée souplement avec quelques mèches encadrant le visage ; coiffures et tenues adaptables aux scènes.
+- Robe couture **champagne satinée**, asymétrique à une épaule, drapée, avec fente élégante, sandales fines et bijoux discrets.
+- Présence chaleureuse, sûre d'elle, séduisante et raffinée, sans esthétique de diva rétro.
+- Décor d'accueil : bureau / salon haut de gamme, marbre noir, détails dorés, éclairage chaud, fleurs blanches, logo « AGENCE CRISTAL ».
+- La direction artistique **Hollywood** reste celle d'un luxe cinématographique **actualisé pour 2026**, et non une reconstitution historique.
+- Cette illustration validée constitue **la nouvelle référence visuelle à réutiliser pour les prochains développements** ; elle ne doit pas être confondue avec les portraits provisoires précédemment utilisés.
+
+**Historique des décisions :** l'utilisateur a décrit l'image générée comme « moderne dans son apparence élégante et sexy à souhait », puis a confirmé « Oui c'est une cristal validée ».
+
+**Précaution de continuité :** la validation du portrait ne signifie pas que les actifs actuels du site ont déjà été remplacés. Préserver le visage et la cohérence artistique de Cristal lors des futures scènes ; demander validation avant de remplacer les visuels actuellement déployés si l'image de référence doit être recadrée ou adaptée.
+
