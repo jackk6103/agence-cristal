@@ -93,3 +93,14 @@ Le porteur du projet a **expressément validé** une nouvelle illustration de Cr
 
 **Précaution de continuité :** la validation du portrait ne signifie pas que les actifs actuels du site ont déjà été remplacés. Préserver le visage et la cohérence artistique de Cristal lors des futures scènes ; demander validation avant de remplacer les visuels actuellement déployés si l'image de référence doit être recadrée ou adaptée.
 
+
+### Image officielle archivée dans le dépôt
+
+**Portrait validé — fichier original en pleine résolution (1122 × 1402 px) :**
+
+![Cristal 2026, robe champagne couture dans le salon noir et or de l'Agence](../public/characters/cristal_2026_validee.png)
+
+- Fichier : [`public/characters/cristal_2026_validee.png`](../public/characters/cristal_2026_validee.png)
+- Image générée et expressément validée le 16 novembre 2026, conservée telle quelle en PNG.
+- Destinée à servir de référence visuelle pour les animations du bureau, le futur accueil « Entrer dans le bureau de Cristal » et les déclinaisons de Cristal.
+- **Ne remplace pas encore les images du site en production** sans une décision de déploiement spécifique.
