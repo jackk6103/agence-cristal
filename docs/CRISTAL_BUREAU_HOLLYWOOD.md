@@ -104,3 +104,19 @@ Le porteur du projet a **expressément validé** une nouvelle illustration de Cr
 - Image générée et expressément validée le 16 novembre 2026, conservée telle quelle en PNG.
 - Destinée à servir de référence visuelle pour les animations du bureau, le futur accueil « Entrer dans le bureau de Cristal » et les déclinaisons de Cristal.
 - **Ne remplace pas encore les images du site en production** sans une décision de déploiement spécifique.
+
+
+## Décision artistique — 17 novembre 2026 : le cognac
+
+Le porteur du projet choisit **le cognac** pour la scène d'accueil, précisément parce que ce choix est rare dans ce genre de séquence et donne au bureau une signature française, raffinée et singulière.
+
+### Nouveau prolongement du scénario (à réaliser en véritable vidéo)
+
+- Le visiteur franchit le seuil du bureau dans un mouvement de caméra immersif.
+- Cristal 2026 apparaît en plan large, **marche naturellement** vers le visiteur et l'accueille ; aucun effet de collage ou de déplacement d'image fixe ne doit tenir lieu de jeu d'actrice.
+- Dans un mouvement fluide et cohérent, elle se dirige vers un meuble-bar élégant, saisit une carafe et **se sert du cognac** dans un verre approprié. La robe et les cheveux suivent physiquement ses mouvements ; reflets ambrés dans la lumière chaude.
+- Elle se tourne vers la caméra et, avec un léger sourire, **propose un cognac au visiteur**, par exemple : « Vous prendrez bien un cognac ? Je trouve que certaines conversations méritent qu'on prenne son temps… »
+- Elle invite ensuite le visiteur à s'installer et déclenche la transition vers l'interface de dialogue : « Mais je manque à tous mes devoirs… Installez-vous. Qu'est-ce qui me vaut le plaisir de votre visite ? »
+- Prévoir une alternative non alcoolisée si le visiteur préfère, sans en faire le motif central de la scène.
+
+**Important :** cette décision complète le scénario validé ; ce document ne signifie pas qu'une vidéo réaliste a été générée. La prévisualisation HTML existante est un montage animé, pas un film. Pour le résultat attendu, il faut un vrai modèle vidéo avec mouvements corporels crédibles, continuité des mains/objets et synchronisation labiale.
