@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090706">
+<title>Le bureau vivant de Cristal — Agence Cristal</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#090706;color:#f6e4c7;font-family:Arial,Helvetica,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 4%;gap:12px;max-width:1300px;margin:auto}
+.brand{font-size:clamp(13px,2vw,18px);letter-spacing:.24em;color:#e4c38d;text-decoration:none;font-weight:700;white-space:nowrap}
+.brand span{font-size:27px;vertical-align:middle}.tag{font-size:10px;color:#a78e6c;letter-spacing:.12em;text-align:right}
+.stage{position:relative;max-width:1270px;margin:0 auto;height:min(77dvh,790px);min-height:460px;overflow:hidden;background:radial-gradient(ellipse at 71% 44%,#69401e 0%,#2c1b11 23%,#0d0a09 67%,#030304 100%);border:1px solid #82623b;box-shadow:0 22px 58px #000;isolation:isolate}
+.wall{position:absolute;inset:0 0 20%;background:repeating-linear-gradient(90deg,#0b0908 0 9%,#49301d 9.2%,#090908 9.8%,#20160f 10.6%,#0b0908 23%)}
+.wall:after{content:"";position:absolute;left:32%;top:19%;width:37%;height:22%;border-top:2px solid #84572e;border-bottom:2px solid #84572e;opacity:.5}
+.sign{position:absolute;top:25%;left:29%;color:#bf955a;font:clamp(20px,4vw,56px) Georgia,serif;letter-spacing:.22em;text-shadow:0 0 25px #e3b77577}
+.sconce{position:absolute;top:16%;height:70px;width:17px;background:linear-gradient(90deg,#875822,#ffebb0,#7b4b20);box-shadow:0 0 34px 12px #e2a6638a;border-top:9px solid #794c27;border-bottom:9px solid #794c27}
+.scone1{left:12%}.scone2{left:57%}
+.floor{position:absolute;bottom:0;height:27%;width:100%;background:linear-gradient(#27170e,#0b0909);border-top:3px solid #91612e}
+.floor:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(88deg,transparent 0 19%,#a1783d30 19.2% 19.4%)}
+.doorframe{position:absolute;right:8%;top:10%;width:26%;height:67%;border:7px solid #3c291a;outline:2px solid #b88848;box-shadow:0 0 48px #b8864670;perspective:950px;z-index:3}
+.doorlight{position:absolute;inset:0;background:radial-gradient(ellipse,#ffe0a7,#aa6f38 45%,#261711 90%)}
+.door{position:absolute;inset:0;transform-origin:right center;background:linear-gradient(90deg,#17100d,#3d291c,#17100d);border:2px solid #ad7a3e;box-shadow:inset 0 0 0 9px #26190f,inset 0 0 0 12px #674122}
+.panel{position:absolute;left:15%;right:15%;height:31%;border:3px solid #76502b}.top{top:13%}.bottom{bottom:13%}
+.handle{position:absolute;left:15%;top:51%;height:12px;width:12px;background:#d3a15a;border-radius:50%;box-shadow:0 0 8px #f1ba72}
+.hero{position:absolute;z-index:4;left:51%;bottom:-4%;width:38%;height:112%;opacity:0;transform:translate(43%,7%) scale(.74);transform-origin:bottom center;filter:drop-shadow(0 11px 30px #000)}
+.hero img{width:100%;height:100%;object-fit:contain;object-position:bottom;-webkit-mask-image:radial-gradient(ellipse 48% 67% at 50% 49%,black 47%,#000e 63%,transparent 100%);mask-image:radial-gradient(ellipse 48% 67% at 50% 49%,black 47%,#000e 63%,transparent 100%)}
+.desk{position:absolute;z-index:3;bottom:5%;left:-4%;height:17%;width:41%;transform:skewY(-3deg);background:linear-gradient(135deg,#59402b,#0d0b0a 40%,#271a12);border:3px solid #9e7642;box-shadow:0 11px 28px #000a}
+.desk:before{content:"";position:absolute;top:0;left:0;right:0;height:12px;background:linear-gradient(90deg,#e1b979,#241711,#c59558)}
+.lamp{position:absolute;z-index:2;left:18%;bottom:22%;width:16px;height:70px;background:linear-gradient(90deg,#090808,#bd873c,#110c08)}
+.lamp:before{content:"";position:absolute;top:-21px;left:-28px;width:73px;height:35px;background:linear-gradient(#d0a461,#24150d);border-radius:50% 50% 12% 12%;box-shadow:0 0 35px #eab36a}
+.shade{position:absolute;z-index:5;inset:0;box-shadow:inset 0 0 110px 40px #0009;pointer-events:none}
+.intro{position:absolute;z-index:9;top:50%;left:7%;width:min(600px,82%);padding:28px 5% 28px 0;transform:translateY(-50%);background:linear-gradient(90deg,#070606ee,#0e0b09dd 80%,transparent)}
+.kicker{color:#dab677;letter-spacing:.23em;font-size:11px;font-weight:bold}
+h1{font:normal clamp(40px,6.8vw,88px) Georgia,serif;line-height:1.02;margin:17px 0 22px}
+h1 em{color:#efcfa1}.intro p:not(.kicker){font-size:16px;max-width:450px;line-height:1.7;color:#e0c9ac}
+.primary{display:inline-block;padding:15px 21px;min-height:50px;background:linear-gradient(125deg,#f4dcae,#ae7e3d);color:#211309;border:1px solid #f2dbb4;text-decoration:none;font-weight:700;font-size:14px;cursor:pointer}
+.sound{display:block;color:#bfa681;font-size:12px;margin-top:17px}.sound input{accent-color:#cfa96e}
+.overlay{position:absolute;inset:0;z-index:8;pointer-events:none}.overlay button,.overlay a{pointer-events:auto}
+.caption{position:absolute;bottom:10%;left:9%;width:82%;font:italic clamp(16px,2.2vw,26px) Georgia,serif;text-align:center;color:#fff1d5;text-shadow:0 2px 10px #000,0 0 18px #000}
+.line{background:#100c0bd9;padding:15px;border:1px solid #b08d57aa;font-style:normal}
+.skip{position:absolute;right:3%;top:5%;padding:10px 14px;border:1px solid #ac8853;background:#120d0caa;color:#f9e7c4;cursor:pointer}
+.marker{position:absolute;left:4%;top:6%;font-size:10px;letter-spacing:.2em;color:#d7b47d}
+.bar{position:absolute;bottom:0;left:0;width:0;height:4px;background:#f1cd8e}
+.end{position:absolute;z-index:10;left:6%;bottom:7%;width:min(600px,88%);padding:22px 28px;background:#0e0b0aed;border:1px solid #c2985e;box-shadow:0 12px 45px #000e}
+.end h2{font:normal clamp(30px,4vw,50px) Georgia,serif;margin:12px 0;color:#f7d9a9}.end p{font-size:15px;line-height:1.55}
+.end small{display:block;margin-top:10px;color:#bba387}
+.again{padding:13px 17px;color:#f4d6aa;border:1px solid #c59c63;background:transparent;cursor:pointer;margin-left:9px}
+footer{max-width:1200px;margin:13px auto;padding:0 12px;font-size:11px;color:#9d8a72;text-align:center;line-height:1.6}
+.voicealert{position:absolute;z-index:13;bottom:3%;left:3%;font-size:11px;background:#100c0c;color:#f7d4a8;padding:7px}
+.play .door{animation:openDoor 3.3s ease-out forwards}.play .hero{animation:walkIn 11.5s ease-out forwards}.play .bar{animation:timeline 19s linear forwards}
+.done .door{transform:rotateY(-76deg)}.done .hero{opacity:1;transform:translate(-18%,0) scale(1)}
+@keyframes openDoor{0%,8%{transform:rotateY(0)}100%{transform:rotateY(-76deg)}}
+@keyframes walkIn{0%,20%{opacity:0;transform:translate(43%,7%) scale(.74)}28%{opacity:.95}55%{opacity:1;transform:translate(4%,1%) scale(.86)}80%{opacity:1;transform:translate(-16%,0) scale(.98)}100%{opacity:1;transform:translate(-18%,0) scale(1)}}
+@keyframes timeline{to{width:100%}}
+@media(max-width:640px){header{padding:12px 3%}.brand{letter-spacing:.09em}.tag{max-width:132px;font-size:8px}.stage{height:76dvh;min-height:485px}.doorframe{right:5%;width:39%;height:54%;top:14%}.hero{left:27%;width:78%;height:86%;bottom:-1%}.sign{left:12%;font-size:22px;top:31%}.desk{width:55%;height:13%}.intro{left:5%;width:92%;background:#070605e8;padding:28px 12px}.intro p:not(.kicker){font-size:14px}.end{left:4%;width:92%;bottom:5%;padding:17px}.end p{font-size:13px}.again{margin:9px 0 0}.caption{left:4%;width:92%;font-size:20px}.scone2{left:49%}}
+@media(prefers-reduced-motion:reduce){.play .door,.play .hero,.play .bar{animation-duration:.01ms}}
+</style>
+</head>
+<body>
+<header><a href="/" class="brand"><span>◇</span> AGENCE CRISTAL</a><div class="tag">LE BUREAU VIVANT · PRÉVISUALISATION CINÉMATOGRAPHIQUE</div></header>
+<main class="stage" id="stage" aria-label="Scène cinématographique : l'entrée dans le bureau de Cristal">
+<div class="wall"></div><div class="sign">CRISTAL</div><div class="sconce scone1"></div><div class="sconce scone2"></div><div class="floor"></div>
+<div class="doorframe"><div class="doorlight"></div><div class="door"><div class="panel top"></div><div class="panel bottom"></div><i class="handle"></i></div></div>
+<div class="hero"><img src="/characters/cristal_2026_validee.png" alt="Cristal 2026 en robe champagne" draggable="false"></div>
+<div class="lamp"></div><div class="desk"></div><div class="shade"></div>
+<div id="intro" class="intro"><p class="kicker">UNE RENCONTRE COMME AU CINÉMA</p><h1>Le bureau de <em>Cristal</em></h1><p>Une porte entrouverte. Une lumière dorée. Et une rencontre qui commence avant le premier mot.</p><button class="primary" id="start">◇ &nbsp; Lancer la scène</button><label class="sound"><input type="checkbox" id="sound" checked> Tenter la voix française de l'appareil</label></div>
+<div class="overlay" id="overlay" hidden><div class="marker">SÉQUENCE 01 · LE BUREAU</div><button class="skip" id="skip">Passer la scène</button><div class="caption" id="caption" aria-live="polite"></div><div class="bar"></div></div>
+<div class="end" id="end" hidden><p class="kicker">BIENVENUE DANS MON UNIVERS</p><h2>Entrez, je vous en prie.</h2><p>Je suis Cristal, gérante virtuelle de l'Agence. Chaque personne a son histoire, chaque rencontre sa promesse.</p><a class="primary" href="mailto:cristal.et.jeanmarie@gmail.com?subject=Contact%20Agence%20Cristal">Écrire à Cristal</a><button class="again" id="again">Revoir la scène</button><small>Le dialogue IA direct n'est pas encore connecté. Le contact ouvre un e-mail.</small></div>
+<div class="voicealert" id="notice" hidden>Voix indisponible sur cet appareil ; les sous-titres restent visibles.</div>
+</main>
+<footer>Prévisualisation animée fondée sur le scénario validé le 16 novembre 2026 · Portrait officiel Cristal 2026 · Les souvenirs privés ne sont pas utilisés.</footer>
+<script>
+(function(){
+const line="Ah… vous voilà. Je commençais à me demander si vous oseriez pousser cette porte. Entrez, je vous en prie.";
+const stage=document.getElementById("stage"),intro=document.getElementById("intro"),overlay=document.getElementById("overlay"),caption=document.getElementById("caption"),end=document.getElementById("end"),notice=document.getElementById("notice"),sound=document.getElementById("sound");
+let timers=[];
+function cancel(){timers.forEach(clearTimeout);timers=[];if("speechSynthesis" in window)window.speechSynthesis.cancel();}
+function later(ms,fn){timers.push(setTimeout(fn,ms));}
+function speak(){if(!sound.checked)return;if(!("speechSynthesis" in window)){notice.hidden=false;return;}const speech=new SpeechSynthesisUtterance(line);speech.lang="fr-FR";speech.rate=.85;speech.pitch=1.06;const fr=window.speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().startsWith("fr"));speech.voice=fr.find(v=>/femme|female|hortense|audrey|amelie|marie/i.test(v.name))||fr[0]||null;speech.onerror=()=>{notice.hidden=false};window.speechSynthesis.speak(speech);}
+function finish(){cancel();stage.classList.remove("play");stage.classList.add("done");overlay.hidden=true;intro.hidden=true;end.hidden=false;}
+function start(){cancel();stage.classList.remove("done","play");void stage.offsetWidth;stage.classList.add("play");intro.hidden=true;end.hidden=true;overlay.hidden=false;notice.hidden=true;caption.textContent="La porte s'entrouvre…";later(2600,()=>{caption.textContent="Une silhouette apparaît dans la lumière dorée."});later(5500,()=>{caption.textContent="Cristal avance à votre rencontre."});later(9200,()=>{caption.textContent="Elle se retourne. Un instant de silence…"});later(11500,()=>{caption.textContent="« "+line+" »";caption.classList.add("line");speak()});later(19100,finish);}
+document.getElementById("start").addEventListener("click",start);
+document.getElementById("again").addEventListener("click",()=>{caption.classList.remove("line");start()});
+document.getElementById("skip").addEventListener("click",finish);
+window.addEventListener("pagehide",cancel);
+})();
+</script>
+</body></html>
